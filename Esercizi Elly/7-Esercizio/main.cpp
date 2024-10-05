@@ -6,9 +6,9 @@ int main() {
     cout << "Calcolo dell'eta', inserisci il tuo anno di nascita: ";
     cin >> anno;
     
-    int nascita = 2024 - anno;
+    int anni = 2024 - anno;
 
-    cout << "Hai " << nascita << " anni!";
+    cout << "Hai " << anni << " anni!";
     
     return 0;
 }
