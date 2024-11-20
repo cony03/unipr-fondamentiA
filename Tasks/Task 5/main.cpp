@@ -79,14 +79,17 @@ int main() {
         }
 
         for(int i = 0; i < strlen(parolaA); i++) {
-            for(int k = 0; k < strlen(parolaB); k++) {
-                if(parolaA[i] != parolaB[k]) {
-                    anagramma = false;
-                } else {
-                    anagramma = true;
-                }
+            if(parolaA[i] != parolaB[i]) {
+                anagramma = false;
+            } else {
+                anagramma = true;
             }
         }
+
+        // cout << endl;
+        // cout << "Prima parola ordinata: " << parolaA << endl;
+        // cout << "Seconda parola ordinata: " << parolaB;
+        // cout << endl;
 
         for(int i = 0; i < strlen(parolaA); i++) {
             for(int k = 0; k < strlen(parolaB); k++) {
@@ -100,6 +103,13 @@ int main() {
             cout << "Le parole non possono essere anagrammi!" << endl;
             anagramma = false;
             reset = true;
+        } else {
+            for(int i = 0; i < strlen(parolaA); i++) {
+                if(parolaA[i] != parolaB[i]) {
+                    anagramma = false;
+                    reset = true;
+                }
+            }
         }
 
         if (anagramma) {
